@@ -1,110 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Méthode 5×10 – Perdez du poids naturellement</title>
-  <meta name="description" content="Découvrez la Méthode 5×10 : un plan simple et réaliste pour perdre du poids sans régimes extrêmes.">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Méthode 5×10 – Perdez du poids rapidement et durablement</title>
+  <meta name="description" content="Un plan simple, naturel et efficace pour perdre du poids sans régimes extrêmes. Seulement 5 minutes par jour.">
   <style>
-    body {margin:0; font-family:Arial, sans-serif; background:#0B0B0C; color:#fff; line-height:1.6;}
-    h1,h2,h3 {color:#FFD54A;}
-    a {text-decoration:none;}
+    body {margin:0; font-family:Inter, sans-serif; background:#0B0B0C; color:#fff; line-height:1.6;}
+    h1,h2,h3 {font-weight:700;}
     .container {max-width:1000px; margin:0 auto; padding:20px;}
-    .btn {display:inline-block; padding:14px 28px; border-radius:10px; font-weight:bold; transition:.2s;}
-    .btn-primary {background:#23C55E; color:#0B0B0C; box-shadow:0 6px 15px rgba(35,197,94,.4);}
-    .btn-primary:hover {background:#1BA14D;}
-    .section {padding:60px 20px;}
-    .card {background:#121316; border-radius:14px; padding:20px; margin-bottom:20px; box-shadow:0 10px 30px rgba(0,0,0,.35);}
-    .grid {display:grid; gap:20px;}
-    .benefits {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
-    .testimonials {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;}
-    .price {font-size:2rem; color:#FFD54A; font-weight:bold;}
-    .strike {text-decoration:line-through; color:#aaa;}
-    footer {text-align:center; padding:30px; color:#999; font-size:0.9rem;}
+    .btn {background:#23C55E; color:#fff; padding:14px 30px; border-radius:10px; text-decoration:none; display:inline-block; font-weight:600;}
+    .btn:hover {background:#1BA14D;}
+    .section {padding:70px 20px;}
+    .card {background:#121316; padding:20px; border-radius:14px; margin-bottom:20px;}
+    .price {font-size:2rem; color:#FFD54A; font-weight:700;}
+    .strike {text-decoration:line-through; opacity:.6;}
   </style>
 </head>
 <body>
 
+<!-- HERO -->
+<section class="section" style="text-align:center;">
+  <div class="container">
+    <h1>🔥 La Méthode 5×10 : Perdez du poids en 10 jours</h1>
+    <p>Un plan simple, naturel et durable basé sur 5 actions quotidiennes de 10 minutes. Pas de régimes extrêmes, pas de privations, seulement des résultats réels.</p>
+    <a href="#offer" class="btn">Je veux commencer maintenant →</a>
+  </div>
+</section>
+
 <!-- QUIZ -->
-<section class="section" style="text-align:center; background:#121316;">
+<section class="section" style="background:#121316; text-align:center;">
   <div class="container">
     <h2>🎯 Faites ce petit quiz avant de commencer</h2>
     <form id="quizForm" style="max-width:600px; margin:20px auto; text-align:left;">
       <div class="card">
         <label>1. Comment vous sentez-vous par rapport à votre poids ?</label><br>
-        <input type="radio" name="q1"> Fatigué(e) et sans énergie<br>
-        <input type="radio" name="q1"> Insatisfait(e) de mon poids<br>
-        <input type="radio" name="q1"> Anxieux(se) à cause des régimes<br>
-        <input type="radio" name="q1"> Je veux seulement améliorer ma santé
+        <input type="radio" name="q1" value="fatigue"> Fatigué(e) et sans énergie<br>
+        <input type="radio" name="q1" value="insatisfait"> Insatisfait(e) de mon poids<br>
+        <input type="radio" name="q1" value="anxieux"> Anxieux(se) à cause des régimes<br>
+        <input type="radio" name="q1" value="sante"> Je veux seulement améliorer ma santé
       </div>
       <div class="card">
         <label>2. Avez-vous déjà essayé des régimes restrictifs ?</label><br>
-        <input type="radio" name="q2"> Oui, plusieurs fois<br>
-        <input type="radio" name="q2"> Parfois, mais sans résultat durable<br>
-        <input type="radio" name="q2"> Jamais, mais j’y pense<br>
-        <input type="radio" name="q2"> J’ai perdu du poids, mais j’ai tout repris
+        <input type="radio" name="q2" value="oui"> Oui, plusieurs fois<br>
+        <input type="radio" name="q2" value="parfois"> Parfois, mais sans résultat durable<br>
+        <input type="radio" name="q2" value="jamais"> Jamais, mais j’y pense<br>
+        <input type="radio" name="q2" value="yoyo"> J’ai perdu du poids, mais j’ai tout repris
       </div>
       <div class="card">
         <label>3. Quel est votre plus grand défi aujourd’hui ?</label><br>
-        <input type="radio" name="q3"> Manque de discipline<br>
-        <input type="radio" name="q3"> Anxiété et fringales<br>
-        <input type="radio" name="q3"> Ne pas savoir par où commencer<br>
-        <input type="radio" name="q3"> Manque de motivation
+        <input type="radio" name="q3" value="discipline"> Manque de discipline<br>
+        <input type="radio" name="q3" value="anxiete"> Anxiété et fringales<br>
+        <input type="radio" name="q3" value="commencer"> Ne pas savoir par où commencer<br>
+        <input type="radio" name="q3" value="motivation"> Manque de motivation
       </div>
-      <button type="button" class="btn btn-primary" onclick="showResult()">Voir le résultat</button>
+      <button type="button" class="btn" onclick="showResult()">Voir le résultat</button>
     </form>
+
     <div id="result" style="margin-top:20px; display:none;">
       <div class="card">
-        <h3>✅ Merci d’avoir complété le quiz !</h3>
-        <p>Peu importe vos réponses, la <strong>Méthode 5×10</strong> est conçue pour vous aider à perdre du poids de façon <strong>simple, naturelle et durable</strong>.</p>
-        <a href="#offer" class="btn btn-primary">Découvrir l’ebook →</a>
+        <h3>✅ Vos résultats</h3>
+        <div id="answers"></div>
+        <p style="margin-top:15px;">Peu importe vos réponses, la <strong>Méthode 5×10</strong> est conçue pour vous aider à perdre du poids de façon <strong>simple, naturelle et durable</strong>.</p>
+        <a href="#offer" class="btn">Découvrir l’ebook →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HERO -->
-<header class="section" style="text-align:center;">
-  <div class="container">
-    <h1>Méthode 5×10<br><span style="color:#FFD54A;">Perdez du poids en 10 jours</span></h1>
-    <p>Un plan simple basé sur <strong>5 minutes par jour</strong>, <strong>10 aliments clés</strong> et <strong>10 jours</strong> pour transformer votre corps sans souffrance.</p>
-    <a href="#offer" class="btn btn-primary">Oui, je veux commencer</a>
-  </div>
-</header>
-
-<!-- COMMENT ÇA MARCHE -->
+<!-- BENEFICES -->
 <section class="section">
   <div class="container">
-    <h2>📖 Comment fonctionne la Méthode 5×10 ?</h2>
-    <div class="benefits">
-      <div class="card"><h3>🥗 10 aliments essentiels</h3><p>Une sélection d’aliments simples qui accélèrent la perte de poids et boostent l’énergie.</p></div>
-      <div class="card"><h3>⏱️ 5 minutes par jour</h3><p>Des actions rapides et réalistes pour rester motivé(e) sans pression.</p></div>
-      <div class="card"><h3>📅 Plan de 10 jours</h3><p>Un guide pratique étape par étape pour des résultats visibles dès la première semaine.</p></div>
-    </div>
+    <h2>✅ Ce que vous allez obtenir</h2>
+    <div class="card">🔥 Un plan quotidien de 10 jours simple à suivre</div>
+    <div class="card">💡 Des techniques naturelles pour brûler les graisses</div>
+    <div class="card">🍎 Un guide alimentaire facile et flexible</div>
+    <div class="card">⚡ Plus d’énergie et de motivation dès la première semaine</div>
+    <div class="card">🛡️ Une méthode réaliste, sans régimes extrêmes</div>
   </div>
 </section>
 
-<!-- BÉNÉFICES -->
+<!-- TEMOIGNAGES -->
 <section class="section" style="background:#121316;">
   <div class="container">
-    <h2>✨ Les résultats que vous allez obtenir</h2>
-    <div class="benefits">
-      <div class="card"><h3>Énergie retrouvée</h3><p>Moins de fatigue et plus de vitalité au quotidien.</p></div>
-      <div class="card"><h3>Perte de poids réelle</h3><p>Des kilos en moins, sans effet yoyo.</p></div>
-      <div class="card"><h3>Confiance renforcée</h3><p>Retrouvez le plaisir de vous regarder dans le miroir.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- TÉMOIGNAGES -->
-<section class="section">
-  <div class="container">
-    <h2>💬 Témoignages (fictifs)</h2>
-    <div class="testimonials">
-      <div class="card"><p>“J’ai perdu 3 kilos en une semaine, sans frustration. Simple et efficace !”<br><strong>– Sophie, Lyon</strong></p></div>
-      <div class="card"><p>“Enfin une méthode qui ne demande pas des heures de sport ou un régime impossible.”<br><strong>– Marc, Paris</strong></p></div>
-      <div class="card"><p>“Je me sens plus léger, moins stressé et surtout fier de moi !”<br><strong>– Claire, Marseille</strong></p></div>
-    </div>
+    <h2>🗣️ Témoignages (fictifs)</h2>
+    <div class="card">“J’ai perdu 3 kg en deux semaines sans me sentir privée. Simple et efficace !” – Claire, Lyon</div>
+    <div class="card">“Enfin un plan que je peux suivre sans stress. Je me sens plus léger et motivé.” – Marc, Paris</div>
+    <div class="card">“J’avais tout essayé. Cette méthode m’a aidé à retrouver confiance.” – Sophie, Marseille</div>
   </div>
 </section>
 
@@ -114,7 +96,7 @@
     
     <!-- IMAGE DE LA COUVERTURE -->
     <div style="flex:1; min-width:280px;">
-      <img src="ebook-france.png" alt="Couverture de l’ebook Méthode 5×10" 
+      <img src="Capa .PNG" alt="Couverture de l’ebook Méthode 5×10" 
            style="max-width:100%; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,.4);">
     </div>
 
@@ -124,7 +106,7 @@
       <p><span class="strike">9,99 €</span></p>
       <p class="price">Seulement 4,99 €</p>
       <p><strong>Accès immédiat à l’ebook digital</strong> après paiement sécurisé.</p>
-      <a href="#" class="btn btn-primary">Je veux l’ebook pour 4,99 € →</a>
+      <a href="#" class="btn">Je veux l’ebook pour 4,99 € →</a>
       <p style="color:#aaa; font-size:0.9rem; margin-top:10px;">Paiement 100% sécurisé via Hotmart. Accès immédiat.</p>
     </div>
 
@@ -133,22 +115,51 @@
 
 <!-- GARANTIE -->
 <section class="section">
-  <div class="container">
-    <div class="card" style="text-align:center;">
-      <h3>✅ Garantie 7 jours satisfait ou remboursé</h3>
-      <p>Si vous n’êtes pas satisfait(e), vous serez remboursé(e) sans aucune question.</p>
-    </div>
+  <div class="container card" style="text-align:center;">
+    <h3>🛡️ Garantie satisfait ou remboursé</h3>
+    <p>Vous avez 7 jours pour tester la méthode. Si vous n’êtes pas satisfait(e), je vous rembourse intégralement. Sans risque, sans stress.</p>
   </div>
 </section>
 
-<footer>
-  <p>© 2025 Lucas Daniel – Tous droits réservés.</p>
+<!-- FOOTER -->
+<footer style="background:#0B0B0C; text-align:center; padding:20px; color:#888;">
+  © 2025 – Tous droits réservés.
 </footer>
 
 <script>
 function showResult(){
-  document.getElementById('quizForm').style.display="none";
-  document.getElementById('result').style.display="block";
+  const q1 = document.querySelector('input[name="q1"]:checked');
+  const q2 = document.querySelector('input[name="q2"]:checked');
+  const q3 = document.querySelector('input[name="q3"]:checked');
+
+  if(!q1 || !q2 || !q3){
+    alert("Merci de répondre à toutes les questions !");
+    return;
+  }
+
+  let responses = "";
+
+  // Réponse 1
+  if(q1.value === "fatigue") responses += "<p><strong>Q1 :</strong> Vous vous sentez fatigué(e) et sans énergie. La méthode 5×10 vous aidera à retrouver vitalité.</p>";
+  if(q1.value === "insatisfait") responses += "<p><strong>Q1 :</strong> Vous êtes insatisfait(e) de votre poids. Cette méthode est conçue pour des résultats visibles sans extrêmes.</p>";
+  if(q1.value === "anxieux") responses += "<p><strong>Q1 :</strong> Vous êtes anxieux(se) à cause des régimes. Ici, pas de privations, mais un plan réaliste.</p>";
+  if(q1.value === "sante") responses += "<p><strong>Q1 :</strong> Vous cherchez à améliorer votre santé. Parfait, la méthode met l’accent sur bien-être + équilibre.</p>";
+
+  // Réponse 2
+  if(q2.value === "oui") responses += "<p><strong>Q2 :</strong> Vous avez déjà essayé plusieurs régimes. 5×10 est différent : simple et durable.</p>";
+  if(q2.value === "parfois") responses += "<p><strong>Q2 :</strong> Vous avez tenté sans résultats. Ici, chaque étape est progressive et accessible.</p>";
+  if(q2.value === "jamais") responses += "<p><strong>Q2 :</strong> Vous n’avez jamais essayé. C’est l’occasion idéale de commencer de la bonne manière.</p>";
+  if(q2.value === "yoyo") responses += "<p><strong>Q2 :</strong> Vous avez connu l’effet yoyo. Cette méthode vise à stabiliser vos résultats.</p>";
+
+  // Réponse 3
+  if(q3.value === "discipline") responses += "<p><strong>Q3 :</strong> Votre défi est la discipline. 5 minutes par jour suffisent pour instaurer une habitude.</p>";
+  if(q3.value === "anxiete") responses += "<p><strong>Q3 :</strong> L’anxiété et les fringales vous freinent. La méthode inclut des techniques simples de contrôle.</p>";
+  if(q3.value === "commencer") responses += "<p><strong>Q3 :</strong> Vous ne savez pas par où commencer. Le guide pas-à-pas vous montre exactement quoi faire.</p>";
+  if(q3.value === "motivation") responses += "<p><strong>Q3 :</strong> Manque de motivation ? Le système de petites victoires quotidiennes maintient l’élan.</p>";
+
+  document.getElementById("answers").innerHTML = responses;
+  document.getElementById("quizForm").style.display="none";
+  document.getElementById("result").style.display="block";
 }
 </script>
 
