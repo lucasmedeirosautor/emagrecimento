@@ -4,183 +4,307 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Méthode 5×10 – Perdez 5 kg en 10 jours sans faim</title>
-  <meta name="description" content="Découvrez la méthode 5×10 : simple, naturelle et efficace pour perdre du poids sans régimes extrêmes. Seulement 5 minutes par jour.">
+  <meta name="description" content="La Méthode 5×10 : 5 actions simples de 10 minutes par jour pour perdre 5 kg en 10 jours – sans faim, sans restrictions extrêmes. Accès immédiat à l’ebook.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Méthode 5×10 – Perdez 5 kg en 10 jours"/>
+  <meta property="og:description" content="Perte de poids simple et naturelle : 5 actions de 10 minutes par jour. Accès immédiat à l’ebook."/>
+  <!-- Remova se não tiver imagem OG -->
+  <!-- <meta property="og:image" content="https://seusite.com/og-5x10.jpg"/> -->
   <style>
-    body {margin:0; font-family:Inter, sans-serif; background:#0B0B0C; color:#fff; line-height:1.6;}
-    h1,h2,h3 {font-weight:700;}
-    .container {max-width:1000px; margin:0 auto; padding:20px;}
-    
-    /* Botão principal CTA */
-    .btn {
-      background:#FF6B00; 
-      color:#fff; 
-      padding:14px 30px; 
-      border-radius:10px; 
-      text-decoration:none; 
-      display:inline-block; 
-      font-weight:600; 
-      font-size:1.1rem;
-      transition:0.3s;
+    :root{
+      --bg:#0B0B0C;
+      --card:#121316;
+      --text:#F5F7FA;
+      --muted:#A9B0BC;
+      --brand:#FF6B00;
+      --brand-dark:#E55E00;
+      --accent:#3B82F6;
+      --success:#22c55e;
+      --warning:#f59e0b;
     }
-    .btn:hover {background:#E55E00;}
-    
-    /* Seções */
-    .section {padding:70px 20px;}
-    .card {background:#121316; padding:20px; border-radius:14px; margin-bottom:20px;}
-    .price {font-size:2rem; color:#FFD54A; font-weight:700;}
-    .strike {text-decoration:line-through; opacity:.6;}
-    
-    /* Destaques secundários */
-    h2 {color:#3B82F6;}
-    h3 {color:#3B82F6;}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1080px;margin:0 auto;padding:0 20px}
+    .section{padding:72px 0}
+    h1,h2,h3{margin:0 0 12px}
+    h1{font-size:clamp(1.9rem,2.4vw+1.2rem,3rem);font-weight:800;letter-spacing:-0.02em}
+    h2{font-size:clamp(1.4rem,1.2vw+1rem,2rem);color:var(--accent);font-weight:800}
+    h3{font-size:1.15rem;color:var(--accent);font-weight:700}
+    p{margin:0 0 16px;color:#E6E8EE}
+    ul{margin:12px 0 0 18px}
+    .btn{display:inline-block;background:var(--brand);color:#fff;padding:14px 22px;border-radius:12px;font-weight:700;transition:.25s;box-shadow:0 8px 20px #ff6b001f}
+    .btn:hover{background:var(--brand-dark);transform:translateY(-1px)}
+    .btn-outline{background:transparent;border:2px solid var(--brand);color:#fff}
+    .card{background:var(--card);border:1px solid #1E2026;border-radius:16px;padding:22px}
+    .grid{display:grid;gap:20px}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
+    .muted{color:var(--muted)}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#13233a;border:1px solid #1c3354;color:#cfe0ff;font-weight:700;font-size:.9rem}
+    .hero{padding-top:32px}
+    .hero-wrap{display:grid;gap:36px;grid-template-columns:1.2fr .9fr;align-items:center}
+    @media (max-width:980px){.hero-wrap{grid-template-columns:1fr}}
+    .price{font-weight:800;font-size:2rem;color:#FFD54A}
+    .strike{opacity:.7;text-decoration:line-through}
+    .trust{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+    .trust img{height:22px;opacity:.9;filter:grayscale(20%)}
+    .testimonial{display:flex;gap:14px}
+    .avatar{width:44px;height:44px;border-radius:50%;background:#222}
+    .faq-item{border-bottom:1px solid #1f232b;padding:16px 0}
+    .faq-q{cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:700}
+    .faq-a{display:none;padding:10px 0 0;color:#dbe2f1}
+    /* Barra fixa mobile */
+    .sticky-cta{position:fixed;left:0;right:0;bottom:0;background:#101114;border-top:1px solid #222;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;z-index:50}
+    .sticky-cta .btn{padding:12px 16px;border-radius:10px}
+    @media (min-width:860px){.sticky-cta{display:none}}
+    /* Bandeau cookies */
+    .cookies{position:fixed;left:14px;right:14px;bottom:78px;background:#0e1118;border:1px solid #1f2530;padding:14px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.25);z-index:60}
+    .cookies p{margin:0 0 10px}
+    .cookies .btn{padding:10px 14px;border-radius:10px}
+    .list-check li{margin-bottom:8px}
+    .list-check li::marker{content:"✅ "}
+    .list-bolt li::marker{content:"⚡ "}
+    .center{text-align:center}
   </style>
 </head>
 <body>
 
-<!-- HERO -->
-<section class="section" style="text-align:center;">
-  <div class="container">
-    <h1>🔥 Perdez 5 kg en 10 jours <br> sans faim ni régimes extrêmes</h1>
-    <p>Avec la <strong>Méthode 5×10</strong>, il suffit de 5 actions simples de 10 minutes par jour pour transformer votre corps et retrouver votre énergie.</p>
-    <a href="#offer" class="btn">Je veux commencer maintenant →</a>
-  </div>
-</section>
-
-<!-- QUIZ -->
-<section class="section" style="background:#121316; text-align:center;">
-  <div class="container">
-    <h2>🎯 Faites ce petit quiz avant de commencer</h2>
-    <form id="quizForm" style="max-width:600px; margin:20px auto; text-align:left;">
-      <div class="card">
-        <label>1. Comment vous sentez-vous par rapport à votre poids ?</label><br>
-        <input type="radio" name="q1" value="fatigue"> Fatigué(e) et sans énergie<br>
-        <input type="radio" name="q1" value="insatisfait"> Insatisfait(e) de mon poids<br>
-        <input type="radio" name="q1" value="anxieux"> Anxieux(se) à cause des régimes<br>
-        <input type="radio" name="q1" value="sante"> Je veux seulement améliorer ma santé
+  <!-- HERO -->
+  <header class="section hero">
+    <div class="container hero-wrap">
+      <div>
+        <div class="badge">🔥 Nouveau en France · Résultats visibles dès 7 jours</div>
+        <h1>Perdez <span style="color:#FFD54A">5&nbsp;kg</span> en <span style="color:#FFD54A">10&nbsp;jours</span><br> sans faim ni régimes extrêmes</h1>
+        <p class="muted" style="max-width:680px">
+          La <strong>Méthode 5×10</strong> est un système simple : <strong>5 actions</strong> de <strong>10 minutes</strong> par jour
+          pour activer votre métabolisme, réduire les fringales et retrouver votre énergie – sans salle de sport ni restrictions absurdes.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px">
+          <a class="btn" href="#acheter">Je commence maintenant →</a>
+          <a class="btn btn-outline" href="#fonctionne">Comment ça marche</a>
+        </div>
+        <div class="trust" style="margin-top:18px">
+          <!-- Substitua por logos reais se quiser -->
+          <img alt="Paiement sécurisé" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Ssl_certified.svg">
+          <span class="muted">Paiement 100% sécurisé via Hotmart · Accès immédiat</span>
+        </div>
       </div>
-      <div class="card">
-        <label>2. Avez-vous déjà essayé des régimes restrictifs ?</label><br>
-        <input type="radio" name="q2" value="oui"> Oui, plusieurs fois<br>
-        <input type="radio" name="q2" value="parfois"> Parfois, mais sans résultat durable<br>
-        <input type="radio" name="q2" value="jamais"> Jamais, mais j’y pense<br>
-        <input type="radio" name="q2" value="yoyo"> J’ai perdu du poids, mais j’ai tout repris
-      </div>
-      <div class="card">
-        <label>3. Quel est votre plus grand défi aujourd’hui ?</label><br>
-        <input type="radio" name="q3" value="discipline"> Manque de discipline<br>
-        <input type="radio" name="q3" value="anxiete"> Anxiété et fringales<br>
-        <input type="radio" name="q3" value="commencer"> Ne pas savoir par où commencer<br>
-        <input type="radio" name="q3" value="motivation"> Manque de motivation
-      </div>
-      <button type="button" class="btn" onclick="showResult()">Voir le résultat</button>
-    </form>
-
-    <div id="result" style="margin-top:20px; display:none;">
-      <div class="card">
-        <h3>✅ Vos résultats</h3>
-        <div id="answers"></div>
-        <p style="margin-top:15px;">Peu importe vos réponses, la <strong>Méthode 5×10</strong> est conçue pour vous aider à perdre du poids de façon <strong>simple, naturelle et durable</strong>.</p>
-        <a href="#offer" class="btn">Découvrir l’ebook →</a>
+      <div>
+        <!-- CAPA DO EBOOK -->
+        <!-- Troque por sua imagem real da capa -->
+        <img src="capa-5x10.png" alt="Ebook Méthode 5×10 – Couverture" style="border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,.35)">
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- BENEFICES -->
-<section class="section">
-  <div class="container">
-    <h2>✅ Pourquoi la Méthode 5×10 fonctionne</h2>
-    <ul>
-      <li>🔥 Perdez du poids sans faim ni frustration</li>
-      <li>⚡ Boostez votre énergie dès la première semaine</li>
-      <li>🍎 Suivez un plan alimentaire flexible et naturel</li>
-      <li>🛡️ Pas de régimes extrêmes, résultats durables</li>
-      <li>📖 Plan simple de 10 jours, facile à appliquer</li>
-    </ul>
-    <a href="#offer" class="btn">Je veux commencer dès aujourd’hui →</a>
-  </div>
-</section>
-
-<!-- TEMOIGNAGES -->
-<section class="section" style="background:#121316;">
-  <div class="container">
-    <h2>🗣️ Témoignages</h2>
-    <div class="card">“J’ai perdu 3 kg en deux semaines sans me sentir privée. Simple et efficace !” – Claire, Lyon</div>
-    <div class="card">“Enfin un plan que je peux suivre sans stress. Je me sens plus léger et motivé.” – Marc, Paris</div>
-    <div class="card">“J’avais tout essayé. Cette méthode m’a aidé à retrouver confiance.” – Sophie, Marseille</div>
-  </div>
-</section>
-
-<!-- OFFRE -->
-<section class="section" id="offer" style="background:#121316; text-align:center;">
-  <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:40px;">
-    
-    <!-- IMAGE DE LA COUVERTURE -->
-    <div style="flex:1; min-width:280px;">
-      <img src="Capa .PNG" alt="Couverture de l’ebook Méthode 5×10" 
-           style="max-width:100%; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,.4);">
+  <!-- STORY / AUTORITÉ -->
+  <section class="section">
+    <div class="container grid grid-2">
+      <div class="card">
+        <h2>Mon histoire en 30 secondes</h2>
+        <p>J’étais fatigué, gonflé, et j’avais essayé tous les régimes “miracles”. Résultat : effet yoyo, frustration, et zéro énergie.</p>
+        <p>Puis j’ai testé un protocole très simple : des <strong>micro-actions de 10 minutes</strong> par jour. En 10 jours, j’ai relancé mon métabolisme, j’ai mieux dormi et j’ai enfin vu l’aiguille descendre.</p>
+        <p>J’ai compilé tout cela dans un guide clair, <strong>sans blabla</strong>, que <strong>des Français·es de Paris, Lyon, Marseille</strong> utilisent déjà au quotidien.</p>
+      </div>
+      <div class="card">
+        <h2>Ce que vous allez obtenir</h2>
+        <ul class="list-check">
+          <li>Un <strong>plan jour par jour</strong> : 10 minutes suffisent</li>
+          <li>Un <strong>menu flexible</strong> anti-fringales (sans compter les calories)</li>
+          <li>Des <strong>astuces métaboliques</strong> faciles à appliquer</li>
+          <li>Une <strong>méthode durable</strong> sans effet yoyo</li>
+          <li>Accès immédiat sur mobile, tablette ou ordinateur</li>
+        </ul>
+      </div>
     </div>
+  </section>
 
-    <!-- TEXTE DE L’OFFRE -->
-    <div style="flex:1; min-width:280px;">
-      <h2>🔥 Offre spéciale – édition limitée</h2>
-      <p><span class="strike">9,99 €</span></p>
-      <p class="price">Seulement 4,99 €</p>
-      <p><strong>Accès immédiat à l’ebook digital</strong> après paiement sécurisé.</p>
-      <a href="https://go.hotmart.com/X101471251A" class="btn">Obtenir l’ebook maintenant →</a>
-      <p style="color:#aaa; font-size:0.9rem; margin-top:10px;">Paiement 100% sécurisé via Hotmart. Accès immédiat.</p>
+  <!-- POURQUOI ÇA FONCTIONNE -->
+  <section class="section" id="fonctionne">
+    <div class="container">
+      <h2 class="center">Pourquoi la Méthode 5×10 fonctionne</h2>
+      <div class="grid grid-3" style="margin-top:16px">
+        <div class="card">
+          <h3>Micro-actions, maxi résultats</h3>
+          <p>Des habitudes minuscules, faciles à tenir, qui s’additionnent et font bouger la balance dès la 1ère semaine.</p>
+        </div>
+        <div class="card">
+          <h3>Sans faim, sans stress</h3>
+          <p>Pas de privations extrêmes. Vous mangez mieux, pas moins – et vous gardez le plaisir.</p>
+        </div>
+        <div class="card">
+          <h3>Zéro salle de sport</h3>
+          <p>Des mouvements intelligents de 10 minutes pour activer la combustion – réalisables chez vous.</p>
+        </div>
+      </div>
+      <div class="center" style="margin-top:18px">
+        <a class="btn" href="#acheter">Oui, je veux commencer aujourd’hui →</a>
+      </div>
     </div>
+  </section>
 
+  <!-- TÉMOIGNAGES -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <h2 class="center">Ils et elles ont commencé — et ça marche</h2>
+      <div class="grid grid-3" style="margin-top:16px">
+        <div class="card testimonial">
+          <div class="avatar"></div>
+          <div>
+            <p>« J’ai perdu 3,2 kg en 10 jours sans me priver. Le plan est clair et motivant. »</p>
+            <p class="muted">Claire – Lyon</p>
+          </div>
+        </div>
+        <div class="card testimonial">
+          <div class="avatar"></div>
+          <div>
+            <p>« En une semaine j’avais plus d’énergie et moins de fringales. Simple et réaliste. »</p>
+            <p class="muted">Marc – Paris</p>
+          </div>
+        </div>
+        <div class="card testimonial">
+          <div class="avatar"></div>
+          <div>
+            <p>« J’avais tout essayé. Cette méthode m’a enfin donné un cadre facile à suivre. »</p>
+            <p class="muted">Sophie – Marseille</p>
+          </div>
+        </div>
+      </div>
+      <div class="center" style="margin-top:18px">
+        <a class="btn" href="#acheter">Je veux les mêmes résultats →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFRE / PRICING -->
+  <section class="section" id="acheter" style="background:#0e1116">
+    <div class="container grid grid-2" style="align-items:center">
+      <div>
+        <!-- Mockup 3D opcional — troque pela sua imagem -->
+        <img src="mockup-ebook-5x10.png" alt="Mockup Ebook Méthode 5×10" style="border-radius:16px;box-shadow:0 20px 44px rgba(0,0,0,.35)">
+      </div>
+      <div class="card">
+        <h2>Accédez à l’ebook aujourd’hui</h2>
+        <p class="muted">Edition numérique · Accès immédiat après paiement sécurisé</p>
+        <p style="margin-top:10px"><span class="strike">19,90 €</span></p>
+        <p class="price">Aujourd’hui&nbsp;: 4,99 €</p>
+        <ul class="list-bolt">
+          <li>Plan 10 jours pas-à-pas</li>
+          <li>Listes de courses & mini-recettes</li>
+          <li>Protocoles de 10 minutes (sans matériel)</li>
+        </ul>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
+          <a class="btn" href="https://go.hotmart.com/X101471251A" target="_blank" rel="noopener">Obtenir l’ebook maintenant →</a>
+          <a class="btn btn-outline" href="#garantie">Voir la garantie</a>
+        </div>
+        <p class="muted" style="margin-top:10px">Paiement 100% sécurisé via Hotmart. Lecture sur mobile, tablette ou ordinateur.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTIE -->
+  <section class="section" id="garantie">
+    <div class="container card center">
+      <h2>Garantie 7 jours satisfait ou remboursé</h2>
+      <p>Testez la Méthode 5×10 pendant une semaine. Si vous n’êtes pas satisfait·e, nous vous remboursons intégralement. <strong>Sans question, sans risque.</strong></p>
+      <div style="margin-top:14px">
+        <a class="btn" href="https://go.hotmart.com/X101471251A" target="_blank" rel="noopener">Je veux tester sans risque →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <h2 class="center">Questions fréquentes</h2>
+      <div class="card" style="margin-top:16px">
+        <div class="faq-item">
+          <div class="faq-q">Est-ce que je vais avoir faim ?<span>＋</span></div>
+          <div class="faq-a">Non. La méthode privilégie la satiété et la stabilité de l’énergie, sans privations extrêmes.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Je n’ai pas le temps…<span>＋</span></div>
+          <div class="faq-a">10 minutes par jour suffisent. Les actions sont conçues pour rentrer dans un emploi du temps chargé.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Et si je n’obtiens pas de résultats ?<span>＋</span></div>
+          <div class="faq-a">Vous êtes couvert·e par la garantie 7 jours. Si ce n’est pas pour vous, on vous rembourse.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">C’est pour débutant·e ?<span>＋</span></div>
+          <div class="faq-a">Oui. Tout est expliqué pas-à-pas, sans jargon. Pas besoin de salle de sport.</div>
+        </div>
+      </div>
+      <div class="center" style="margin-top:18px">
+        <a class="btn" href="https://go.hotmart.com/X101471251A" target="_blank" rel="noopener">Accéder à l’ebook maintenant →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="section" style="padding-top:28px">
+    <div class="container center">
+      <p class="muted">© 2025 – Tous droits réservés.</p>
+      <p class="muted" style="margin-top:6px">
+        <a href="#" class="muted">Mentions légales</a> · 
+        <a href="#" class="muted">Politique de confidentialité</a> · 
+        <a href="#" class="muted">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- BARRA FIXA MOBILE -->
+  <div class="sticky-cta">
+    <div>
+      <strong>Méthode 5×10</strong><br>
+      <span class="muted" style="font-size:.9rem">Aujourd’hui : 4,99 €</span>
+    </div>
+    <a class="btn" href="https://go.hotmart.com/X101471251A" target="_blank" rel="noopener">Obtenir →</a>
   </div>
-</section>
 
-<!-- GARANTIE -->
-<section class="section">
-  <div class="container card" style="text-align:center;">
-    <h3>🛡️ Garantie satisfait ou remboursé</h3>
-    <p>Vous avez 7 jours pour tester la méthode. Si vous n’êtes pas satisfait(e), je vous rembourse intégralement. Sans risque, sans stress.</p>
-    <a href="https://go.hotmart.com/X101471251A" class="btn">Je veux tester sans risque →</a>
+  <!-- COOKIES -->
+  <div class="cookies" id="cookieBanner" style="display:none">
+    <p class="muted">Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez l’utilisation des cookies.</p>
+    <div style="display:flex;gap:10px;justify-content:flex-end">
+      <button class="btn btn-outline" id="declineCookies">Refuser</button>
+      <button class="btn" id="acceptCookies">Accepter</button>
+    </div>
   </div>
-</section>
 
-<!-- FOOTER -->
-<footer style="background:#0B0B0C; text-align:center; padding:20px; color:#888;">
-  © 2025 – Tous droits réservés.
-</footer>
+  <script>
+    // FAQ toggle
+    document.querySelectorAll('.faq-q').forEach(q=>{
+      q.addEventListener('click',()=>{
+        const a = q.parentElement.querySelector('.faq-a');
+        const open = a.style.display==='block';
+        document.querySelectorAll('.faq-a').forEach(x=>x.style.display='none');
+        document.querySelectorAll('.faq-q span').forEach(s=>s.textContent='＋');
+        a.style.display = open ? 'none' : 'block';
+        q.querySelector('span').textContent = open ? '＋' : '−';
+      });
+    });
 
-<script>
-function showResult(){
-  const q1 = document.querySelector('input[name="q1"]:checked');
-  const q2 = document.querySelector('input[name="q2"]:checked');
-  const q3 = document.querySelector('input[name="q3"]:checked');
+    // Cookie banner simples (GDPR friendly básico)
+    const cookieKey='accept_5x10_cookies';
+    const banner=document.getElementById('cookieBanner');
+    if(!localStorage.getItem(cookieKey)){
+      setTimeout(()=>banner.style.display='block',1200);
+    }
+    document.getElementById('acceptCookies').onclick=()=>{localStorage.setItem(cookieKey,'1');banner.style.display='none';}
+    document.getElementById('declineCookies').onclick=()=>{banner.style.display='none';}
 
-  if(!q1 || !q2 || !q3){
-    alert("Merci de répondre à toutes les questions !");
-    return;
-  }
-
-  let responses = "";
-
-  if(q1.value === "fatigue") responses += "<p><strong>Q1 :</strong> Vous vous sentez fatigué(e) et sans énergie. La méthode 5×10 vous aidera à retrouver vitalité.</p>";
-  if(q1.value === "insatisfait") responses += "<p><strong>Q1 :</strong> Vous êtes insatisfait(e) de votre poids. Cette méthode est conçue pour des résultats visibles sans extrêmes.</p>";
-  if(q1.value === "anxieux") responses += "<p><strong>Q1 :</strong> Vous êtes anxieux(se) à cause des régimes. Ici, pas de privations, mais un plan réaliste.</p>";
-  if(q1.value === "sante") responses += "<p><strong>Q1 :</strong> Vous cherchez à améliorer votre santé. Parfait, la méthode met l’accent sur bien-être + équilibre.</p>";
-
-  if(q2.value === "oui") responses += "<p><strong>Q2 :</strong> Vous avez déjà essayé plusieurs régimes. 5×10 est différent : simple et durable.</p>";
-  if(q2.value === "parfois") responses += "<p><strong>Q2 :</strong> Vous avez tenté sans résultats. Ici, chaque étape est progressive et accessible.</p>";
-  if(q2.value === "jamais") responses += "<p><strong>Q2 :</strong> Vous n’avez jamais essayé. C’est l’occasion idéale de commencer de la bonne manière.</p>";
-  if(q2.value === "yoyo") responses += "<p><strong>Q2 :</strong> Vous avez connu l’effet yoyo. Cette méthode vise à stabiliser vos résultats.</p>";
-
-  if(q3.value === "discipline") responses += "<p><strong>Q3 :</strong> Votre défi est la discipline. 5 minutes par jour suffisent pour instaurer une habitude.</p>";
-  if(q3.value === "anxiete") responses += "<p><strong>Q3 :</strong> L’anxiété et les fringales vous freinent. La méthode inclut des techniques simples de contrôle.</p>";
-  if(q3.value === "commencer") responses += "<p><strong>Q3 :</strong> Vous ne savez pas par où commencer. Le guide pas-à-pas vous montre exactement quoi faire.</p>";
-  if(q3.value === "motivation") responses += "<p><strong>Q3 :</strong> Manque de motivation ? Le système de petites victoires quotidiennes maintient l’élan.</p>";
-
-  document.getElementById("answers").innerHTML = responses;
-  document.getElementById("quizForm").style.display="none";
-  document.getElementById("result").style.display="block";
-}
-</script>
-
+    // Suavizar âncoras
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}); }
+      });
+    });
+  </script>
 </body>
 </html>
