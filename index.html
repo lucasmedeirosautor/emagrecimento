@@ -3,36 +3,32 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Méthode 5×10 – Perdez 5 kg en 10 jours sans faim</title>
-  <meta name="description" content="La Méthode 5×10 : 5 actions simples de 10 minutes par jour pour perdre 5 kg en 10 jours – sans faim, sans restrictions extrêmes. Accès immédiat à l’ebook.">
+  <title>Le Secret Minceur Naturel – Perdez jusqu’à 5 kg en 10 jours</title>
+  <meta name="description" content="Le Secret Minceur Naturel : un protocole simple, sans faim ni régimes extrêmes. Accès IMMEDIAT à vie à l’ebook + mises à jour gratuites. Paiement sécurisé.">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <meta property="og:title" content="Méthode 5×10 – Perdez 5 kg en 10 jours"/>
-  <meta property="og:description" content="Perte de poids simple et naturelle : 5 actions de 10 minutes par jour. Accès immédiat à l’ebook."/>
-  <!-- Remova se não tiver imagem OG -->
-  <!-- <meta property="Foto.PNG" content="Foto.PNG"/> -->
+  <meta property="og:title" content="Le Secret Minceur Naturel"/>
+  <meta property="og:description" content="Perte de poids simple et naturelle en 10 jours. Accès à vie à l’ebook."/>
+  <!-- Substitua pela imagem real da capa/OG -->
+  <!-- <meta property="og:image" content="https://seusite.com/capa-og.jpg"/> -->
+
   <style>
     :root{
-      --bg:#0B0B0C;
-      --card:#121316;
-      --text:#F5F7FA;
-      --muted:#A9B0BC;
-      --brand:#FF6B00;
-      --brand-dark:#E55E00;
-      --accent:#3B82F6;
-      --success:#22c55e;
-      --warning:#f59e0b;
+      --bg:#0B0B0C; --card:#121316; --text:#F5F7FA; --muted:#A9B0BC;
+      --brand:#FF6B00; --brand-dark:#E55E00; --accent:#3B82F6;
+      --success:#22c55e; --warning:#f59e0b;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
     img{max-width:100%;display:block}
     a{text-decoration:none;color:inherit}
     .container{max-width:1080px;margin:0 auto;padding:0 20px}
     .section{padding:72px 0}
     h1,h2,h3{margin:0 0 12px}
     h1{font-size:clamp(1.9rem,2.4vw+1.2rem,3rem);font-weight:800;letter-spacing:-0.02em}
-    h2{font-size:clamp(1.4rem,1.2vw+1rem,2rem);color:var(--accent);font-weight:800}
-    h3{font-size:1.15rem;color:var(--accent);font-weight:700}
+    h2{font-size:clamp(1.4rem,1.2vw+1rem,2rem);color:#FFD54A;font-weight:800}
+    h3{font-size:1.1rem;color:var(--accent);font-weight:700}
     p{margin:0 0 16px;color:#E6E8EE}
     ul{margin:12px 0 0 18px}
     .btn{display:inline-block;background:var(--brand);color:#fff;padding:14px 22px;border-radius:12px;font-weight:700;transition:.25s;box-shadow:0 8px 20px #ff6b001f}
@@ -44,31 +40,34 @@
     .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
     @media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
     .muted{color:var(--muted)}
-    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#13233a;border:1px solid #1c3354;color:#cfe0ff;font-weight:700;font-size:.9rem}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#1A1C22;border:1px solid #2a2f3a;color:#cfe0ff;font-weight:700;font-size:.9rem}
     .hero{padding-top:32px}
     .hero-wrap{display:grid;gap:36px;grid-template-columns:1.2fr .9fr;align-items:center}
     @media (max-width:980px){.hero-wrap{grid-template-columns:1fr}}
     .price{font-weight:800;font-size:2rem;color:#FFD54A}
     .strike{opacity:.7;text-decoration:line-through}
     .trust{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-    .trust img{height:22px;opacity:.9;filter:grayscale(20%)}
+    .trust img{height:26px;opacity:.9;filter:grayscale(10%)}
     .testimonial{display:flex;gap:14px}
     .avatar{width:44px;height:44px;border-radius:50%;background:#222}
     .faq-item{border-bottom:1px solid #1f232b;padding:16px 0}
     .faq-q{cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:700}
     .faq-a{display:none;padding:10px 0 0;color:#dbe2f1}
-    /* Barra fixa mobile */
+    .center{text-align:center}
+    /* barra fixa mobile */
     .sticky-cta{position:fixed;left:0;right:0;bottom:0;background:#101114;border-top:1px solid #222;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;z-index:50}
     .sticky-cta .btn{padding:12px 16px;border-radius:10px}
     @media (min-width:860px){.sticky-cta{display:none}}
-    /* Bandeau cookies */
+    /* cookies */
     .cookies{position:fixed;left:14px;right:14px;bottom:78px;background:#0e1118;border:1px solid #1f2530;padding:14px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.25);z-index:60}
     .cookies p{margin:0 0 10px}
     .cookies .btn{padding:10px 14px;border-radius:10px}
     .list-check li{margin-bottom:8px}
     .list-check li::marker{content:"✅ "}
+    .list-bolt li{margin-bottom:8px}
     .list-bolt li::marker{content:"⚡ "}
-    .center{text-align:center}
+    .timer{font-weight:800;font-size:1.05rem;color:#ffd54a}
+    .seal{display:inline-block;border:2px dashed var(--success);padding:8px 12px;border-radius:10px;font-weight:700;color:#b7f7c6}
   </style>
 </head>
 <body>
@@ -78,67 +77,47 @@
     <div class="container hero-wrap">
       <div>
         <div class="badge">🔥 Nouveau en France · Résultats visibles dès 7 jours</div>
-        <h1>Perdez <span style="color:#FFD54A">5&nbsp;kg</span> en <span style="color:#FFD54A">10&nbsp;jours</span><br> sans faim ni régimes extrêmes</h1>
+        <h1>Le Secret Minceur Naturel<br>
+          <span style="color:#FFD54A">Perdez jusqu’à 5&nbsp;kg en 10 jours</span><br>
+          sans faim ni régimes extrêmes
+        </h1>
         <p class="muted" style="max-width:680px">
-          La <strong>Méthode 5×10</strong> est un système simple : <strong>5 actions</strong> de <strong>10 minutes</strong> par jour
-          pour activer votre métabolisme, réduire les fringales et retrouver votre énergie – sans salle de sport ni restrictions absurdes.
+          Un protocole simple et réaliste : des <strong>micro-actions quotidiennes</strong> pour activer le métabolisme, réduire les fringales et retrouver votre énergie — <strong>sans salle de sport</strong> ni restrictions absurdes.
         </p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px">
           <a class="btn" href="#acheter">Je commence maintenant →</a>
           <a class="btn btn-outline" href="#fonctionne">Comment ça marche</a>
         </div>
         <div class="trust" style="margin-top:18px">
-          <!-- Substitua por logos reais se quiser -->
-          <img alt="Capa .PNG" src="Capa .PNG">
-          <span class="muted">Paiement 100% sécurisé via Hotmart · Accès immédiat</span>
+          <img src="hotmart-logo.png" alt="Hotmart">
+          <img src="lock.png" alt="Paiement sécurisé">
+          <span class="muted">Paiement 100% sécurisé via Hotmart · Accès immédiat <strong>à vie</strong></span>
         </div>
+        <p class="timer" style="margin-top:8px">⏳ Offre promo se termine dans : <span id="countdown">--:--:--</span></p>
       </div>
       <div>
-        <!-- CAPA DO EBOOK -->
-        <!-- Troque por sua imagem real da capa -->
-        <img src="foto.PNG" alt="foto.PNG" style="border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,.35)">
+        <!-- CAPA DO EBOOK (substitua por sua imagem real) -->
+        <img src="capa.png" alt="Couverture – Le Secret Minceur Naturel" style="border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,.35)">
       </div>
     </div>
   </header>
 
-  <!-- STORY / AUTORITÉ -->
-  <section class="section">
-    <div class="container grid grid-2">
-      <div class="card">
-        <h2>Mon histoire en 30 secondes</h2>
-        <p>J’étais fatigué, gonflé, et j’avais essayé tous les régimes “miracles”. Résultat : effet yoyo, frustration, et zéro énergie.</p>
-        <p>Puis j’ai testé un protocole très simple : des <strong>micro-actions de 10 minutes</strong> par jour. En 10 jours, j’ai relancé mon métabolisme, j’ai mieux dormi et j’ai enfin vu l’aiguille descendre.</p>
-        <p>J’ai compilé tout cela dans un guide clair, <strong>sans blabla</strong>, que <strong>des Français·es de Paris, Lyon, Marseille</strong> utilisent déjà au quotidien.</p>
-      </div>
-      <div class="card">
-        <h2>Ce que vous allez obtenir</h2>
-        <ul class="list-check">
-          <li>Un <strong>plan jour par jour</strong> : 10 minutes suffisent</li>
-          <li>Un <strong>menu flexible</strong> anti-fringales (sans compter les calories)</li>
-          <li>Des <strong>astuces métaboliques</strong> faciles à appliquer</li>
-          <li>Une <strong>méthode durable</strong> sans effet yoyo</li>
-          <li>Accès immédiat sur mobile, tablette ou ordinateur</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- POURQUOI ÇA FONCTIONNE -->
+  <!-- BENEFICIOS / POR QUE FUNCIONA -->
   <section class="section" id="fonctionne">
     <div class="container">
-      <h2 class="center">Pourquoi la Méthode 5×10 fonctionne</h2>
+      <h2 class="center">Pourquoi ça fonctionne (sans souffrir)</h2>
       <div class="grid grid-3" style="margin-top:16px">
         <div class="card">
           <h3>Micro-actions, maxi résultats</h3>
-          <p>Des habitudes minuscules, faciles à tenir, qui s’additionnent et font bouger la balance dès la 1ère semaine.</p>
+          <p>Des habitudes de 10 minutes faciles à tenir qui s’additionnent et font bouger la balance dès la 1ère semaine.</p>
         </div>
         <div class="card">
           <h3>Sans faim, sans stress</h3>
-          <p>Pas de privations extrêmes. Vous mangez mieux, pas moins – et vous gardez le plaisir.</p>
+          <p>Mangez mieux, pas moins. Menus anti-fringales et satiété naturelle.</p>
         </div>
         <div class="card">
-          <h3>Zéro salle de sport</h3>
-          <p>Des mouvements intelligents de 10 minutes pour activer la combustion – réalisables chez vous.</p>
+          <h3>Chez vous, sans matériel</h3>
+          <p>Mouvements intelligents et routines simples : zéro salle de sport, zéro pression.</p>
         </div>
       </div>
       <div class="center" style="margin-top:18px">
@@ -147,73 +126,122 @@
     </div>
   </section>
 
-  <!-- TÉMOIGNAGES -->
-  <section class="section" style="padding-top:0">
+  <!-- HISTOIRE COURTE + CE QUE VOUS RECEVEZ -->
+  <section class="section">
+    <div class="container grid grid-2">
+      <div class="card">
+        <h2>Mon histoire en 30 secondes</h2>
+        <p>Après des “régimes miracles” et l’effet yoyo, j’ai créé un protocole simple : <strong>micro-actions</strong>, <strong>menus anti-fringales</strong> et <strong>rituels métaboliques</strong>. Résultat : plus d’énergie, meilleur sommeil et poids en baisse.</p>
+        <p>Ce guide est <strong>clair</strong>, <strong>sans blabla</strong> et conçu pour des journées chargées.</p>
+      </div>
+      <div class="card">
+        <h2>Vous recevez exactement</h2>
+        <ul class="list-check">
+          <li><strong>Plan jour par jour (10 jours)</strong></li>
+          <li><strong>Menus & listes de courses</strong> anti-fringales</li>
+          <li><strong>Protocoles de 10 minutes</strong> (sans matériel)</li>
+          <li><strong>Accès à vie</strong> + <strong>mises à jour gratuites</strong></li>
+          <li>Lecture sur mobile, tablette ou ordinateur</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVANT / APRES (PROVA SOCIAL VISUAL) -->
+  <section class="section" style="background:#0f1117">
     <div class="container">
-      <h2 class="center">Ils et elles ont commencé — et ça marche</h2>
-      <div class="grid grid-3" style="margin-top:16px">
-        <div class="card testimonial">
-          <div class="avatar"></div>
-          <div>
-            <p>« J’ai perdu 3,2 kg en 10 jours sans me priver. Le plan est clair et motivant. »</p>
-            <p class="muted">Claire – Lyon</p>
-          </div>
+      <h2 class="center">Transformations réelles — Avant / Après</h2>
+      <p class="center muted" style="margin-bottom:28px">
+        Des Français·es de Paris, Lyon et Marseille ont suivi le protocole. Voici des résultats typiques en 10 jours.
+      </p>
+      <div class="grid grid-3">
+        <div class="card">
+          <img src="avant-apres1.jpg" alt="Avant Après 1" style="border-radius:12px;margin-bottom:12px">
+          <p><strong>Claire, 32 ans – Lyon</strong></p>
+          <p class="muted">-4,2 kg en 10 jours, sans privation.</p>
         </div>
-        <div class="card testimonial">
-          <div class="avatar"></div>
-          <div>
-            <p>« En une semaine j’avais plus d’énergie et moins de fringales. Simple et réaliste. »</p>
-            <p class="muted">Marc – Paris</p>
-          </div>
+        <div class="card">
+          <img src="avant-apres2.jpg" alt="Avant Après 2" style="border-radius:12px;margin-bottom:12px">
+          <p><strong>Marc, 41 ans – Paris</strong></p>
+          <p class="muted">-5,1 kg, énergie retrouvée.</p>
         </div>
-        <div class="card testimonial">
-          <div class="avatar"></div>
-          <div>
-            <p>« J’avais tout essayé. Cette méthode m’a enfin donné un cadre facile à suivre. »</p>
-            <p class="muted">Sophie – Marseille</p>
-          </div>
+        <div class="card">
+          <img src="avant-apres3.jpg" alt="Avant Après 3" style="border-radius:12px;margin-bottom:12px">
+          <p><strong>Sophie, 28 ans – Marseille</strong></p>
+          <p class="muted">-3,7 kg en 9 jours. Plus légère et motivée.</p>
         </div>
       </div>
-      <div class="center" style="margin-top:18px">
+      <div class="center" style="margin-top:24px">
         <a class="btn" href="#acheter">Je veux les mêmes résultats →</a>
       </div>
     </div>
   </section>
 
-  <!-- OFFRE / PRICING -->
+  <!-- TEMOIGNAGES TEXTO -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <h2 class="center">Témoignages vérifiés</h2>
+      <div class="grid grid-3" style="margin-top:16px">
+        <div class="card testimonial">
+          <div class="avatar"></div>
+          <div>
+            <p>« Simple, clair et faisable. J’ai perdu 3,2 kg sans faim. »</p>
+            <p class="muted">Élodie – Toulouse</p>
+          </div>
+        </div>
+        <div class="card testimonial">
+          <div class="avatar"></div>
+          <div>
+            <p>« Moins de fringales dès la 1ère semaine. Je dors mieux. »</p>
+            <p class="muted">Hugo – Nantes</p>
+          </div>
+        </div>
+        <div class="card testimonial">
+          <div class="avatar"></div>
+          <div>
+            <p>« Enfin un plan réaliste. Pas de gym, pas de souffrance. »</p>
+            <p class="muted">Sarah – Lille</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFRE / PRIX (inclui ACCES A VIE) -->
   <section class="section" id="acheter" style="background:#0e1116">
     <div class="container grid grid-2" style="align-items:center">
       <div>
-        <!-- Mockup 3D opcional — troque pela sua imagem -->
-        <img src="Capa .PNG" alt="Mockup Ebook Méthode 5×10" style="border-radius:16px;box-shadow:0 20px 44px rgba(0,0,0,.35)">
+        <img src="capa.png" alt="Mockup ebook Le Secret Minceur Naturel" style="border-radius:16px;box-shadow:0 20px 44px rgba(0,0,0,.35)">
       </div>
       <div class="card">
         <h2>Accédez à l’ebook aujourd’hui</h2>
-        <p class="muted">Edition numérique · Accès immédiat après paiement sécurisé</p>
+        <p class="muted">Édition numérique · Accès <strong>immédiat</strong> et <strong>à vie</strong> après paiement sécurisé</p>
         <p style="margin-top:10px"><span class="strike">19,90 €</span></p>
         <p class="price">Aujourd’hui&nbsp;: 4,99 €</p>
         <ul class="list-bolt">
-          <li>Plan 10 jours pas-à-pas</li>
-          <li>Listes de courses & mini-recettes</li>
+          <li>Plan 10 jours pas-à-pas + check-lists</li>
+          <li>Menus anti-fringales + mini-recettes</li>
           <li>Protocoles de 10 minutes (sans matériel)</li>
+          <li><strong>Accès à vie</strong> + <strong>Mises à jour gratuites</strong></li>
+          <li>Support par e-mail pour questions rapides</li>
         </ul>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
           <a class="btn" href="https://go.hotmart.com/X101471251A" target="_blank" rel="noopener">Obtenir l’ebook maintenant →</a>
           <a class="btn btn-outline" href="#garantie">Voir la garantie</a>
         </div>
         <p class="muted" style="margin-top:10px">Paiement 100% sécurisé via Hotmart. Lecture sur mobile, tablette ou ordinateur.</p>
+        <p class="seal" style="margin-top:12px">Accès à vie + Mises à jour incluses</p>
       </div>
     </div>
   </section>
 
   <!-- GARANTIE -->
   <section class="section" id="garantie">
-    <div class="container card center">
-      <h2>Garantie 7 jours satisfait ou remboursé</h2>
-      <p>Testez la Méthode 5×10 pendant une semaine. Si vous n’êtes pas satisfait·e, nous vous remboursons intégralement. <strong>Sans question, sans risque.</strong></p>
-      <div style="margin-top:14px">
-        <a class="btn" href="https://go.hotmart.com/X101471251A" target="_blank" rel="noopener">Je veux tester sans risque →</a>
-      </div>
+    <div class="container card center" style="border:2px dashed #22c55e">
+      <h2>✅ Garantie 7 jours satisfait ou remboursé</h2>
+      <p>Essayez le protocole pendant une semaine. Si vous n’êtes pas satisfait·e, nous vous remboursons <strong>intégralement</strong> — sans question, sans risque.</p>
+      <img src="garantie.png" alt="Garantie 7 jours" style="max-width:120px;margin:16px auto">
+      <a class="btn" href="https://go.hotmart.com/X101471251A" target="_blank" rel="noopener">Je commence sans risque →</a>
     </div>
   </section>
 
@@ -224,11 +252,11 @@
       <div class="card" style="margin-top:16px">
         <div class="faq-item">
           <div class="faq-q">Est-ce que je vais avoir faim ?<span>＋</span></div>
-          <div class="faq-a">Non. La méthode privilégie la satiété et la stabilité de l’énergie, sans privations extrêmes.</div>
+          <div class="faq-a">Non. Le protocole privilégie la satiété et la stabilité de l’énergie, sans privations extrêmes.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Je n’ai pas le temps…<span>＋</span></div>
-          <div class="faq-a">10 minutes par jour suffisent. Les actions sont conçues pour rentrer dans un emploi du temps chargé.</div>
+          <div class="faq-a">10 minutes par jour suffisent. Les actions rentrent dans un emploi du temps chargé.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Et si je n’obtiens pas de résultats ?<span>＋</span></div>
@@ -237,6 +265,10 @@
         <div class="faq-item">
           <div class="faq-q">C’est pour débutant·e ?<span>＋</span></div>
           <div class="faq-a">Oui. Tout est expliqué pas-à-pas, sans jargon. Pas besoin de salle de sport.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Comment j’accède à l’ebook ?<span>＋</span></div>
+          <div class="faq-a">Après l’achat sur Hotmart, vous recevez l’accès immédiat par e-mail. L’ebook reste disponible à vie dans votre compte.</div>
         </div>
       </div>
       <div class="center" style="margin-top:18px">
@@ -260,8 +292,8 @@
   <!-- BARRA FIXA MOBILE -->
   <div class="sticky-cta">
     <div>
-      <strong>Méthode 5×10</strong><br>
-      <span class="muted" style="font-size:.9rem">Aujourd’hui : 4,99 €</span>
+      <strong>Le Secret Minceur Naturel</strong><br>
+      <span class="muted" style="font-size:.9rem">Aujourd’hui : 4,99 € · Accès à vie</span>
     </div>
     <a class="btn" href="https://go.hotmart.com/X101471251A" target="_blank" rel="noopener">Obtenir →</a>
   </div>
@@ -288,8 +320,8 @@
       });
     });
 
-    // Cookie banner simples (GDPR friendly básico)
-    const cookieKey='accept_5x10_cookies';
+    // Cookie banner simples
+    const cookieKey='accept_secret_minceur_cookies';
     const banner=document.getElementById('cookieBanner');
     if(!localStorage.getItem(cookieKey)){
       setTimeout(()=>banner.style.display='block',1200);
@@ -297,7 +329,7 @@
     document.getElementById('acceptCookies').onclick=()=>{localStorage.setItem(cookieKey,'1');banner.style.display='none';}
     document.getElementById('declineCookies').onclick=()=>{banner.style.display='none';}
 
-    // Suavizar âncoras
+    // Scroll suave para âncoras
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click',e=>{
         const id=a.getAttribute('href').slice(1);
@@ -305,6 +337,31 @@
         if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}); }
       });
     });
+
+    // Contador de urgência (48h) com persistência local
+    (function(){
+      const key='smn_deadline';
+      let deadline = localStorage.getItem(key);
+      if(!deadline){
+        // 48h a partir do primeiro acesso
+        deadline = Date.now() + 48*60*60*1000;
+        localStorage.setItem(key, deadline);
+      } else {
+        deadline = parseInt(deadline,10);
+      }
+      const el=document.getElementById('countdown');
+      function pad(n){return n.toString().padStart(2,'0')}
+      function tick(){
+        const diff = deadline - Date.now();
+        if(diff<=0){ el.textContent='00:00:00'; return; }
+        const h = Math.floor(diff/3.6e6);
+        const m = Math.floor((diff%3.6e6)/6e4);
+        const s = Math.floor((diff%6e4)/1e3);
+        el.textContent = pad(h)+':'+pad(m)+':'+pad(s);
+        requestAnimationFrame(tick);
+      }
+      tick();
+    })();
   </script>
 </body>
 </html>
